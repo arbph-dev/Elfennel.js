@@ -64,7 +64,8 @@ Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections
 @section('section8')
 @endsection
 ```
-On emploie la section pour les essais
+On emploie la section 8 pour les essais , la méthode **Tab::MakefromNode** permet de générer les noeuds et le contenu
+
 
 ```js
 initFailSafe()
