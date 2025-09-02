@@ -24,7 +24,25 @@ https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926
 - affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible. Ceci du fait de la portée module et globale des variables et fonctions
 https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926942633/public/build/assets/pure30_note.js#L132
 
+Dés lors, on peut exploiter les evenenements via les attributs **onclick** des noeuds liens (a). 
+Par exmple **ihmTabShow( 0 )** dans
+- le layout [pure30.blade.php](./resources/views/layouts/pure30.blade.php)
+- la vue [note.blade.php](./resources/views/note.blade.php)
+
+```html
+<a class="w3-bar-item w3-button w3-hover-black" href="#" onclick="ihmTabShow( 0 )">Link</a>
+<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ihmTabShow( 0 )">Tab-0</a>
+```
+
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la [structure](./docs/structure.md)
+
+Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections définies par @yield, cela ne semble pas géné
+```blade
+@section('section8')
+@endsection
+```
+
+
 
 Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
 
