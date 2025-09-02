@@ -1,4 +1,6 @@
-Dans un souci de laisser les attributs id et name disponible j'ai choisi la selection sur les classes
+
+Dans un souci de laisser les attributs id et name disponible,  j'ai choisi la selection sur les classes
+Les elements strucutrels ont un id specifique qui ne peut etre réempolyé : **Topbar , Sidebar , Overlay , Root , myFooter**
 
 En combinant les tags HTML5 : section, nav, narticle, header, footer et les classes on peut imagnier se passer des attributs si la strucutre n'évolue pas
 
