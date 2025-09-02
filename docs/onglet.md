@@ -61,11 +61,14 @@ TODO a documenter parametre
 TabTemp.contentSet('<h1>PageManager.showTab</h1><p>TabTemp.contentSet</p>')
 ```
 
+### Tab::contentSetfromData()
+retourne liste complete sans pagination ni lien CRUD , les données sont lues à l'initialisation de **PageManager**
 
-        
-
-        debugger
-        
-        TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
-
-        TabTemp.contentSetfromPaginateData(0) // Ok
+```js
+TabTemp.contentSetfromData()
+```
+### Tab::contentSetfromData()
+retourne liste paginée, ici la page 0 sans lien CRUD , les données sont lues à l'initialisation de **PageManager**
+```js
+TabTemp.contentSetfromPaginateData(0)
+```
