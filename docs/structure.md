@@ -1,6 +1,6 @@
 
 
-Le code brut
+Le code brut est visible dans le fichier [pure30.blade.php](./resources/views/layouts/pure30.blade.php)
 
 
 
