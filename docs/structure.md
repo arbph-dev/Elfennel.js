@@ -57,6 +57,32 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
 ### tab9
 https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L216
 
+- **div** class **w3-container w3-padding-64 w3-hide**
+	- **div** class **w3-container**
+		- **div** class **w3-bar w3-black**
+			- **a** class **w3-bar-item w3-button**
+		- **div** class **w3-panel w3-blue**
+			- **h3**
+			- **p**
+		- **div** class **w3-content w3-display-container**
+  			- **section** class **w3-display-topleft**
+  			- **section** class **w3-display-topleft w3-hide**
+  			- **section** class **w3-display-topleft w3-hide**
+
+```html
+ <div class="w3-container w3-padding-64 w3-hide" >
+      <div class="w3-container">    
+        <div class="w3-bar w3-black">
+          <a href="#" class="w3-bar-item w3-button" onclick="ihmSectiontabShow( this, 0)">section 0</a>
+        <div class="w3-panel w3-blue">
+          <h3>Information!</h3>
+          <p>Blue often indicates a neutral informative change or action.</p>
+        <div class="w3-content w3-display-container">
+          <section class="w3-display-topleft">
+          <section class="w3-display-topleft w3-hide">
+          <section class="w3-display-topleft w3-hide">
+```
+
 
 
 ## Code brut pour documentation
