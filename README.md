@@ -35,6 +35,11 @@ Par exmple **ihmTabShow( 0 )** dans
 ```
 
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la [structure](./docs/structure.md)
+
+Durant le parcours 
+- on instancie des objets **Tab** qui sont associés aux noeuds et elements de structure 
+- on remplit le tableau **collTab** qui contiendra les objet **Tab**
+
 ```js
 const tabClass ='w3-container w3-padding-64'  // détermine la classe employée pour les onglets
 
@@ -59,10 +64,53 @@ Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections
 @section('section8')
 @endsection
 ```
+On emploie la section pour les essais
 
+```js
+initFailSafe()
+{
+  
+  this.#collTab[8].MakefromNode("Titre Onglet 8 xhr") //ok
 
+  let t8 = this.#collTab[8] //ref onglet 8 ??
+  let PMref = this //ref PageManager  necessaire pour la fonction 
+
+  window.xhr_getRequest( 
+    'GET' ,
+    "https://jsonplaceholder.typicode.com/todos?_limit=13" ,
+    {
+      load: function(event) { PMref.UpdateData( t8 , event.target  ) }
+    }  
+  )
+
+}
+```
 
 Le gestionnaire de page **PageManager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
+
+Ici une requete  GET sur URL en passant une callback , la fonction emplyée en callbacks exploite la méthode de **PageManager::UpdateData**
+
+Une reference sur l'objet **PageManager** est nécessaire, this ne portant pas dans la fonction de callback
+
+Des variables sont a transmettre : 
+- t8 correspond à la un objet **Tab**
+- event.target pour gerer la réponse à la requête
+
+```js
+  let PMref = this 
+{ load: function(event) { PMref.UpdateData( t8 , event.target  ) } }  
+```
+
+Les données reçues par **PageManager** via **PageManager::UpdateData** sont stockées dans l'objet Tab
+```js
+UpdateData( el ,  evtXhr)
+  ...
+    let data = JSON.parse(evtXhr.responseText);
+  ...
+    el.StoreData(data) // stocke le sdonnées dans l'objet tab concerné reference el
+
+```  
+
 
 La methode **PageManager::showTab** gere l'affichage des onglets 
 
