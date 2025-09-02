@@ -10,7 +10,7 @@ Si on modifie le style d'une liste on ne modifiera pas le code de gestion, l'ada
 
 Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/layouts/pure30.blade.php)
 
-
+## Structure de la page 
 
 - body
 	- **header** class **w3-top w3-row w3-theme-d4** id **Topbar**
@@ -36,9 +36,13 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
 		- **a** class **w3-bar-item w3-button w3-hover-black**
   		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L147 
 	- **div** class **w3-overlay** id **Overlay**
+ 	https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L164
 	- **div** class **w3-main** id **Root**
-		- **div**   class **w3-auto w3-padding-64**
-		- **div**   class **w3-auto w3-padding-64 w3-hide**
+ 	https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L167
+		- **div**   class **w3-auto w3-padding-64** => **onglet 0**
+  		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L171 
+		- **div**   class **w3-auto w3-padding-64 w3-hide** => **onglet 1**
+  		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L176
 	- **footer**   class **w3-bottom w3-container w3-theme-l2** id **myFooter**
 		- **div** class **w3-center**
 			- **div** class **w3-bar**
@@ -47,7 +51,15 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
 			- **p**
 
 
+---
 
+## Structure détaillé d'un onglet 
+### tab9
+https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L216
+
+
+
+## Code brut pour documentation
 ```html
  <body>
     <header class="w3-top w3-row w3-theme-d4" id="Topbar" name="Topbar">
