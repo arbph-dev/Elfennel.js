@@ -79,8 +79,8 @@ retourne liste complete sans pagination ni lien CRUD , les données sont lues à
 ```js
 TabTemp.contentSetfromData()
 ```
-### Tab::contentSetfromData()
-retourne liste paginée, ici la page 0 sans lien CRUD , les données sont lues à l'initialisation de **PageManager**
+### Tab::contentSetfromPaginateData( P )
+retourne liste paginée sans lien CRUD, ci dessous la page P sera la page 0, les données sont lues à l'initialisation de **PageManager**
 ```js
 TabTemp.contentSetfromPaginateData(0)
 ```
