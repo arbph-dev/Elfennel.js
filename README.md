@@ -1,0 +1,2 @@
+# Elfennel.js
+Frontend library
