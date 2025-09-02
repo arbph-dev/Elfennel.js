@@ -24,7 +24,7 @@ https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926
 - affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible. Ceci du fait de la portée module et globale des variables et fonctions
 https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926942633/public/build/assets/pure30_note.js#L132
 
-Le gestionnaire de page **Pagemanager** s'initialise et parcourt la strucutre
+Le gestionnaire de page **Pagemanager** s'initialise et parcourt la [structure](./docs/structure.md)
 
 Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
 
