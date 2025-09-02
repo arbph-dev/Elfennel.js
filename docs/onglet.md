@@ -7,9 +7,12 @@ La structure est détaillée : [ici](./structure.md#structure-d%C3%A9taill%C3%A9
 Une partie est réservé aux informations dans les onglets
 
 ```html
-<div class="w3-panel w3-blue">
-  <h3>Information!</h3>
-  <p>Blue often indicates a neutral informative change or action.</p>
+<div class="w3-container w3-padding-64 w3-hide" >
+  <div class="w3-container">
+  ...  
+    <div class="w3-panel w3-blue">
+      <h3>Information!</h3>
+      <p>Blue often indicates a neutral informative change or action.</p>
 ```
 
 
