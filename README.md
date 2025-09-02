@@ -3,7 +3,7 @@ Frontend library
 
 
 fichiers : 
-[Pagemanager.js](./public/build/assets/PageManager.js)
+[Pagemanager.js](./public/build/assets/modules/PageManager.js)
 
 ## modules js
 
