@@ -27,8 +27,11 @@ renommer :
 ajout MakeTabfromNode ?? pour creer l'ensemble voir structure
 
 
-on creer buildTabNode qui utilisera buildTabContainerNode et encapsulera => methode a généraliser ??
-buildTabNode contient plusieurs parties distinctes reexpolitables ?
+on creer buildTabNode qui utilisera buildTabContainerNode et encapsulera 
+
+=> methode a généraliser ??
+
+buildTabNode contient plusieurs parties distinctes reexpolitables => plusieurs fonctions
 
 
 
