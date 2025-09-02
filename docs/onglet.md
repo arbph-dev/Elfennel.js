@@ -1,6 +1,6 @@
 Les onglets sont associés à la classe **Tab** du module **PageManager**
 
-La structure est détaillée là : https://github.com/arbph-dev/Elfennel.js/blob/main/docs/structure.md#structure-d%C3%A9taill%C3%A9-dun-onglet
+La structure est détaillée là : [structure d%C3%A9taill%C3%A9 dun onglet](./structure.md#structure-d%C3%A9taill%C3%A9-dun-onglet)
 
 ## zone information
 
