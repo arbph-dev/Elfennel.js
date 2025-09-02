@@ -84,3 +84,62 @@ retourne liste paginée sans lien CRUD, ci dessous la page P sera la page 0, les
 ```js
 TabTemp.contentSetfromPaginateData(0)
 ```
+-----------------------------------------------------------------------------------------------------------------------
+
+## Gestion 
+
+### Tab::CreatefromNode
+Cree le noeud onglet complet qui sera associé a l'objet Tab
+La fonction exploite **buildTabNode** , une fonction utilitaire elle ne connait pas l'objet tab si elel doit etre complété on passera des variables
+
+On assigne les propriétés  avec les valeurs de celle de l'objet avant de retourner le noeud
+
+```js
+let tmpNod =   buildTabNode('Success' , strP1)
+tmpNod.id  = this.id
+tmpNod.name = this.name 
+```
+    
+**ATTENTION** 
+Le noeud n'est assigné a l'objet qu'après l'ajout par le **PageManager::addTab**, quand le noeud est ajouté à la structure
+Il serait possible de passer une référence au noeud Root en paramètre et d'ajouter le noeud dans la fonction
+
+```js
+//PageManager::addTab
+this.#Root.appendChild(nodeTabe)
+this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere tous les onglets document
+objTab.obj = this.#collTabElement[i]
+this.#collTab.push(objTab) //creation des instances de class Tab en memoire
+```
+
+
+
+
+
+## Fonctions bas niveau
+
+### Tab::NodeQuery( sDomQuery )
+permet de retrouver les élements enfants du Noeud associé à l'objet Tab , on commence le parcours depuis le noeud actuel
+
+Pour accéder à la zone information, dont la structure est détaillé plus haut :
+```js
+let TabInfo = this.NodeQuery("div.w3-container.w3-padding-64 > div.w3-container > div.w3-panel")
+```
+- on part du noeud **onglet** : div.w3-container.w3-padding-64
+- on descend au noeud **container onglet** : > div.w3-container
+- on descend au noeud **container onglet** : > div.w3-panel
+
+Noter:
+-  la syntaxe : **div.w3-container.w3-padding-64** ; sans espace entre classe de style
+-  la syntaxe : **#tab-8 > div > div.w3-container** ; fonctionne avec les id
+-  la syntaxe : **div.w3-container.w3-padding-64** plus précise que div.w3-container est a privilégier
+
+### Tab::StoreData( DatIn )
+Stocke les données reçues de XHR  dans la propriété privée **this.#dataStore** 
+
+## Propriété
+### this.#dataStore
+permet de garder les données, les données sont transmises et envoyées par le PageManager
+
+
+
