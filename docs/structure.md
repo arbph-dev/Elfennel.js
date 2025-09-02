@@ -27,9 +27,11 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
  		- **a** class **w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large**
    		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L141
 			- **i** fa fa remove
-   			https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L141 	
+   			https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L142 	
    		- **h4** class **w3-bar-item**
+     	https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L145
 		- **a** class **w3-bar-item w3-button w3-hover-black**
+  		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L147 
 	- **div** class **w3-overlay** id **Overlay**
 	- **div** class **w3-main** id **Root**
 		- **div**   class **w3-auto w3-padding-64**
