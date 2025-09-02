@@ -19,6 +19,7 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
 	- **div** class **w3-overlay** id **Overlay**
 	- **div** class **w3-main** id **Root**
 		- **div**   class **w3-auto w3-padding-64**
+  		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L111
 		- **div**   class **w3-auto w3-padding-64 w3-hide**
 	- **footer**   class **w3-bottom w3-container w3-theme-l2** id **myFooter**
 		- **div** class **w3-center**
