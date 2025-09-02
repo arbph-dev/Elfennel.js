@@ -12,7 +12,7 @@ La solution est mise en oeuvre ici : [https://elfennel.fr/note](https://elfennel
 
 ## Actuellement
 
-La structure est composé d'onglets associés aux objets **Tab**
+La structure est composé d'onglets associés aux objets [**Tab**](./docs/onglet.md)
 
 Le script de page [pure30_note.js](./html/pure30_note.js) 
 
