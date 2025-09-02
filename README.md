@@ -19,7 +19,9 @@ https://github.com/arbph-dev/Elfennel.js/blob/0f05e1c82550b699f58b87ac7fda239338
 - charge la page et ses recources, appele window.onload et instancie **PageManager** via son *constructeur*
 
 - affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible.
+
 ceci du fait de la portée (scope) des variables module et global
+
 La methode **PageManager::showTab** gere l'affichage des onglets 
 
 
