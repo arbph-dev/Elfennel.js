@@ -11,6 +11,13 @@ Les styles sont utilsés pour identifer les partie de structure : header, onglet
 
 ## Actuellement
 
+Le script de page [pure30_note.js](./html/pure30_note.js) 
+- inclu le module [Pagemanager.js](./public/build/assets/modules/PageManager.js)
+- charge la page dans window.onload par appel PageManager.constructor
+- affecte la méthode PM.showTab à la fenêtre pour qu'elle soit acessible du fait de la portée (scope) des variables module et global
+    la methode gere l'affichage des onglets 
+
+
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la strucutre
 
 Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
