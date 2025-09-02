@@ -67,6 +67,13 @@ let a = TabTemp.contentGet() ;
 console.log(a) 
 ```
 
+### Tab::contentGetNode()
+
+
+
+
+
+
 ### Tab::contentSet()
 TODO a documenter parametre
 ```js
@@ -111,6 +118,9 @@ this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere t
 objTab.obj = this.#collTabElement[i]
 this.#collTab.push(objTab) //creation des instances de class Tab en memoire
 ```
+
+### Tab::MakeContainerfromNode( strP1 = 'Message initial template node')
+
 
 ### Tab::MakefromString( strP1 = 'Message initial template string' )
 
