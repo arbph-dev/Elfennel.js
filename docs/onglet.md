@@ -2,6 +2,16 @@ Les onglets sont associés à la classe **Tab** du module **PageManager**
 
 La structure est détaillée : [ici](./structure.md#structure-d%C3%A9taill%C3%A9-dun-onglet)
 
+
+**TODO**
+- a documenter fonctions et variables, paramètres et type de retour
+- harmoniser get , set noeud , objet ou texte en retour
+- choix construction noeud ou text et template ? garder les 2 options ?
+- zone information =>
+  - clear, remet en bleu et vide
+  - show hide
+
+-----------------------------------------------------------------------------------------------------------------------
 ## zone information
 
 Une partie est réservé aux informations dans les onglets
@@ -15,10 +25,13 @@ Une partie est réservé aux informations dans les onglets
       <p>Blue often indicates a neutral informative change or action.</p>
 ```
 
-
-
-
-On l'exploite avec une fonction dédiée : **Tab::infoSet**
+### Tab::infoGet()
+- retourne un objet
+```js
+a = TabTemp.infoGet() ; console.log(a) // 
+```
+### Tab::infoSet(T,M)
+- définit le contenu et le style de la zone information
 ```js
 TabTemp.infoSet('Information', 'Tab::infoSet(T,M) , it s works' )
 ```
@@ -29,5 +42,30 @@ On gere 4 types d'informations a passer en chaine  dans le paramètre  **T** :
 - Success
 - Warning
 
-Un message est ransmis avec la variable **M**
+Un message est transmis avec la variable **M**
 
+
+-----------------------------------------------------------------------------------------------------------------------
+## Zone Contenu
+
+### Tab::contentGet()
+TODO a documenter retour 
+```js
+let a = TabTemp.contentGet() ;
+console.log(a) 
+```
+
+### Tab::contentSet()
+TODO a documenter parametre
+```js
+TabTemp.contentSet('<h1>PageManager.showTab</h1><p>TabTemp.contentSet</p>')
+```
+
+
+        
+
+        debugger
+        
+        TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
+
+        TabTemp.contentSetfromPaginateData(0) // Ok
