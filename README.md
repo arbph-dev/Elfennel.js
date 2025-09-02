@@ -10,8 +10,10 @@ Les styles sont utilsés pour identifer les partie de structure : header, onglet
 
 
 ## Actuellement
+
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la strucutre
-Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie au **Tab** qui en ont la charge
+
+Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
 
 La structure est composé d'onglets associés aux objets **Tab**
 
@@ -21,11 +23,11 @@ La structure est composé d'onglets associés aux objets **Tab**
 
 ## fichiers : 
 - Layout
-  [Pagemanager.js](./public/build/assets/modules/PageManager.js)
+  [pure30](./resources/views/layouts/pure30.blade.php)
 - Vue
-  [Pagemanager.js](./public/build/assets/modules/PageManager.js)
+  [note](./resources/views/note.blade.php)
 - script de page
-  [Pagemanager.js](./public/build/assets/modules/PageManager.js)
+  [Pagemanager.js](./public/build/assets/pure30_note.js)
 - modules javascript
   [Pagemanager.js](./public/build/assets/modules/PageManager.js)
   [xhr.js](./public/build/assets/modules/xhr.js)
