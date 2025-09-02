@@ -1,10 +1,51 @@
 # 2025-09-02 / 002
 
-Essai a réaliser sur modification # 2025-09-02 /001
+Essai a réaliser sur modification # 2025-09-02 /001 => ok
+- MakefromNode doit etre testée
+- On ajoute une méthode PageManger::add()
 
-MakefromNode doit etre testée, elle stocke le noeud dans this.obj Tab::obj
-on doit utiliser collection.length pour déterminer id et name du nouvel onglet
-ce code peut etre testé en fin d'initialisation
+```js
+    addTab()
+    {
+      // cree un nouveau noeud tab
+        let i = this.#collTab.length
+        
+        let objTab = new Tab( i , `tab-${i}`,`tab-${i}` , null );
+        let nodeTabe = objTab.CreatefromNode()
+
+        this.#Root.appendChild(nodeTabe)
+
+        this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere tous les onglets document
+        objTab.obj = this.#collTabElement[i]
+
+        this.#collTab.push(objTab) //creation des instances de class Tab en memoire
+
+
+    }
+```
+
+Ajout correcte dans la structure mais le noeud n'a pas attribut id ni name
+=> modif 
+- on affiche le  tab créer pour les essais
+
+- Tab::MakefromNode doit affecter les propriétés id et name
+
+- Suppression de la partie essai sur l'onglet 8 depuis la fonction show
+	a déplacer dans initfailsafe ou constructeur
+
+- prévoir uen fonction init générale ?? eval string ??
+
+```
+      if ( index === 8 )
+      {
+        let TabTemp = this.#collTab[index]
+//        TabTemp.contentSet('<h1>PageManager.showTab</h1><p>TabTemp.contentSet</p>')
+//        TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
+        TabTemp.contentSetfromPaginateData(0) // Ok
+        TabTemp.infoSet('Information', 'Tab::infoSet(T,M) , it s works' )
+      }
+```
+
 
 
 # 2025-09-02 /001
