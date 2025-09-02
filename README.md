@@ -8,6 +8,7 @@ La structure du document influence le fonctionnement, la structure est mise en f
 
 Les styles sont utilsés pour identifer les partie de structure : header, onglet, barre de navigation
 
+La solution est mise en oeuvre ici : [https://elfennel.fr/note](https://elfennel.fr/note)
 
 ## Actuellement
 
@@ -129,7 +130,7 @@ if ( index === 8 )
 
 
 
-
+---
 
 
 ## fichiers : 
@@ -146,5 +147,3 @@ if ( index === 8 )
 
 
 
-## PageManager
-## xhr
