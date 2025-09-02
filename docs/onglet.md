@@ -47,6 +47,18 @@ Un message est transmis avec la variable **M**
 
 -----------------------------------------------------------------------------------------------------------------------
 ## Zone Contenu
+Le contenu est affiché dans la zone utile de la page sous les barres de navigation "onglet" et "information"
+
+```html
+<div class="w3-container w3-padding-64 w3-hide" >
+  <div class="w3-container">
+  ...  
+    <div class="w3-content w3-display-container">
+      
+```
+
+
+
 
 ### Tab::contentGet()
 TODO a documenter retour 
