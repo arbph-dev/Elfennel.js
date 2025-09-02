@@ -1,6 +1,6 @@
 Les onglets sont associés à la classe **Tab** du module **PageManager**
 
-La structure est détaillé là : 
+La structure est détaillée là : 
 
 ## zone information
 
