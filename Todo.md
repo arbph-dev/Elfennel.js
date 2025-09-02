@@ -38,51 +38,40 @@ function buildTabNode(T, M)
 {
   const ndTab = document.createElement("div");   ndTab.classList ="w3-container" => div.w3-container
   
-  const ndBarTab = document.createElement("div") ;  ndBarTab.classList = "w3-bar w3-black";  ndBarTab.innerHTML="w3-bar"
-=> div.w3-bar w3-black
+  const ndBarTab = document.createElement("div") ;  ndBarTab.classList = "w3-bar w3-black";  ndBarTab.innerHTML="w3-bar" // => div.w3-bar w3-black
   
   let classInfoTab = makeClassInfoTab(T)
-  const ndInfoTab = document.createElement("div") ; ndInfoTab.classList = classInfoTab // -> <div class="w3-panel w3-color">  
-  => div.w3-panel w3-color
+  const ndInfoTab = document.createElement("div") ; ndInfoTab.classList = classInfoTab //   => div.w3-panel w3-color
 
-  const ndH3InfoTab = document.createElement("h3") ; ndH3InfoTab.innerText = T // 
-  => <h3>T</h3>
+  const ndH3InfoTab = document.createElement("h3") ; ndH3InfoTab.innerText = T //   => <h3>T</h3>
 
-  const ndtextInfoTab = document.createElement("p") ; ndtextInfoTab.innerText = M // 
-  => <p>M</p>
+  const ndtextInfoTab = document.createElement("p") ; ndtextInfoTab.innerText = M //   => <p>M</p>
   
-  const ndContentTab = document.createElement("div") ; ndContentTab.classList ="w3-container" // 
-  => <div class="w3-container">
+  const ndContentTab = document.createElement("div") ; ndContentTab.classList ="w3-container" //  => <div class="w3-container">
   
-  ndInfoTab.appendChild(ndH3InfoTab)
-  => div.w3-panel w3-color
-    => h3
+  ndInfoTab.appendChild(ndH3InfoTab) // => div.w3-panel w3-color / h3
 
 ndInfoTab.appendChild(ndtextInfoTab)
-  => div.w3-panel w3-color
-    => h3
-    => <p>M</p>
+ /* => div.w3-panel w3-color /  h3
+  => div.w3-panel w3-color /  p */
 
   ndTab.appendChild(ndBarTab) 
-  => div.w3-container
-    => div."w3-bar w3-black
+/*  => div.w3-container
+    => div."w3-bar w3-black*/
 
 
   ndTab.appendChild(ndInfoTab)
-  => div.w3-container
+  /* => div.w3-container
     => div."w3-bar w3-black
-  => div.w3-panel w3-color
-    => h3
-    => <p>M</p>
-
+  => div.w3-panel w3-color / ( h3 , p)*/
 
   ndTab.appendChild(ndContentTab)
-  => div.w3-container
+ /* => div.w3-container
     => div."w3-bar w3-black
   => div.w3-panel w3-color
     => h3
     => <p>M</p>
-    => <div class="w3-container">
+    => <div class="w3-container">*/
   return ndTab
 
 }
