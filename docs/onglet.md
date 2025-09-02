@@ -90,7 +90,7 @@ TabTemp.contentSetfromPaginateData(0)
 
 ### Tab::CreatefromNode
 Cree le noeud onglet complet qui sera associé a l'objet Tab
-La fonction exploite **buildTabNode** , une fonction utilitaire elle ne connait pas l'objet tab si elel doit etre complété on passera des variables
+La fonction exploite **buildTabNode** , une fonction utilitaire elle ne connait pas l'objet tab , elle pourra etre complétée on passera des variables
 
 On assigne les propriétés  avec les valeurs de celle de l'objet avant de retourner le noeud
 
@@ -112,8 +112,10 @@ objTab.obj = this.#collTabElement[i]
 this.#collTab.push(objTab) //creation des instances de class Tab en memoire
 ```
 
+### Tab::MakefromString( strP1 = 'Message initial template string' )
 
-
+**TODO** Renommer en **CreateContainerfromString**
+emploie la fonction utilitaire **buildTab( T, M )** qui retourne ue chaine, la chaine est assignée au Noeud "onglet"
 
 
 ## Fonctions bas niveau
