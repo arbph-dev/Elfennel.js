@@ -9,23 +9,23 @@ Le code brut
 		- **div** class **w3-theme-l1 w3-left**  id **Topbar_Logo**
   		- **div** class **w3-theme w3-left** id **Topbar_Menu**
      		- **a** class **w3-bar-item w3-button w3-hide-small w3-hover-white**
-	    - **div** class **w3-theme-d1 w3-right** id **Topbar_Sys**
-		 - **a** class **w3-bar-item w3-button w3-hover-white w3-theme-l1 w3-hide-large**
+		- **div** class **w3-theme-d1 w3-right** id **Topbar_Sys**
+  			- **a** class **w3-bar-item w3-button w3-hover-white w3-theme-l1 w3-hide-large**
 	- **nav** class  **w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left** id **Sidebar**
-		  - **a** class **w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large**
-			  - **i** fa fa remove
-		 - **h4** class **w3-bar-item**
+		- **a** class **w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large**
+			- **i** fa fa remove
+   		- **h4** class **w3-bar-item**
 		- **a** class **w3-bar-item w3-button w3-hover-black**
 	- **div** class **w3-overlay** id **Overlay**
 	- **div** class **w3-main** id **Root**
 		- **div**   class **w3-auto w3-padding-64**
 		- **div**   class **w3-auto w3-padding-64 w3-hide**
 	- **footer**   class **w3-bottom w3-container w3-theme-l2** id **myFooter**
-		  	- **div** class **w3-center**
-			  	- **div** class **w3-bar**
-				  	- **a** class **w3-button w3-black**
-			  	- **h4**
-			  	- p
+		- **div** class **w3-center**
+			- **div** class **w3-bar**
+				- **a** class **w3-button w3-black**
+			- **h4**
+			- **p**
 
 
 
