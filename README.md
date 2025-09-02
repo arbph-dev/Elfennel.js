@@ -35,6 +35,24 @@ Par exmple **ihmTabShow( 0 )** dans
 ```
 
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la [structure](./docs/structure.md)
+```js
+const tabClass ='w3-container w3-padding-64'  // détermine la classe employée pour les onglets
+
+this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere tous les onglets document
+this.#collTab = new Array() // on prépare la collection collTab de class Tab
+// parcours les onglets document creation des instances de class Tab en memoire
+//  => les structures peuvent etre identifés ??
+
+for (i =  0 ; i < this.#collTabElement.length; i++) 
+{
+  objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );this.#collTab.push(objTab) //creation des instances de class Tab en memoire
+  this.#collTabElement[i].id = objTab.id // modification DOM
+  this.#collTabElement[i].name = objTab.name // modification DOM
+}
+```
+
+
+
 
 Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections définies par @yield, cela ne semble pas géné
 ```blade
@@ -44,7 +62,7 @@ Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections
 
 
 
-Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
+Le gestionnaire de page **PageManager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
 
 La methode **PageManager::showTab** gere l'affichage des onglets 
 
