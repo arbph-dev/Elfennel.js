@@ -1,3 +1,9 @@
+Dans un souci de laisser les attributs id et name disponible j'ai choisi la selection sur les classes
+
+En combinant les tags HTML5 : section, nav, narticle, header, footer et les classes on peut imagnier se passer des attributs si la strucutre n'évolue pas
+
+Maintenant les évolutions seront repercutées sur les selections , l'évolution des composants ou partie n'entraineront pas nécesairement des modifications de la structure
+Si on modifie le style d'une liste on ne modifiera pas le code de gestion, l'adaptation à une autre strucutre est possible 
 
 
 Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/layouts/pure30.blade.php)
