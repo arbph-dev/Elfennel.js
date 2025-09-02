@@ -24,7 +24,7 @@ Le code brut est visible dans le fichier [pure30.blade.php](../resources/views/l
 		- **div** class **w3-theme-d1 w3-right** id **Topbar_Sys**
   		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L130 
   			- **a** class **w3-bar-item w3-button w3-hover-white w3-theme-l1 w3-hide-large**
-     		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L131 
+     		https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L132 
 	- **nav** class  **w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left** id **Sidebar**
 	https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a3901a7/resources/views/layouts/pure30.blade.php#L140
  		- **a** class **w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large**
