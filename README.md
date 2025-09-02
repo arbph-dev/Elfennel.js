@@ -112,8 +112,21 @@ UpdateData( el ,  evtXhr)
 
 ```  
 
+La methode **PageManager::showTab** gere l'affichage des onglets. La section 8 sert encore pour les essais 
 
-La methode **PageManager::showTab** gere l'affichage des onglets 
+La section 8 est construite, en fin d'inisitalisation de l'objet **PageManager** par la méthode **PageManager::initFailSafe()**
+
+```js
+if ( index === 8 )
+{
+  let TabTemp = this.#collTab[index]
+
+  TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
+  TabTemp.contentSetfromPaginateData(0) // Ok => liste paginée en cours
+```
+
+
+
 
 
 
