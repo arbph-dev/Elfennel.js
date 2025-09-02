@@ -27,7 +27,7 @@ La structure est composé d'onglets associés aux objets **Tab**
 - Vue
   [note](./resources/views/note.blade.php)
 - script de page
-  [Pagemanager.js](./public/build/assets/pure30_note.js)
+  [pure30_note.js](./public/build/assets/pure30_note.js)
 - modules javascript
   [Pagemanager.js](./public/build/assets/modules/PageManager.js)
   [xhr.js](./public/build/assets/modules/xhr.js)
