@@ -11,6 +11,8 @@ Les styles sont utilsés pour identifer les partie de structure : header, onglet
 
 ## Actuellement
 
+La structure est composé d'onglets associés aux objets **Tab**
+
 Le script de page [pure30_note.js](./html/pure30_note.js) 
 
 - inclu le module [Pagemanager.js](./public/build/assets/modules/PageManager.js)
@@ -19,17 +21,14 @@ https://github.com/arbph-dev/Elfennel.js/blob/0f05e1c82550b699f58b87ac7fda239338
 - charge la page et ses recources, appele window.onload et instancie **PageManager** via son *constructeur*
 
 - affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible.
-
-ceci du fait de la portée (scope) des variables module et global
-
-La methode **PageManager::showTab** gere l'affichage des onglets 
-
+    ceci du fait de la portée (scope) des variables module et global
+    La methode **PageManager::showTab** gere l'affichage des onglets 
 
 Le gestionnaire de page **Pagemanager** s'initialise et parcourt la strucutre
 
 Le gestionnaire de page **Pagemanager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
 
-La structure est composé d'onglets associés aux objets **Tab**
+
 
 
 
