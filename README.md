@@ -18,7 +18,7 @@ Le script de page [pure30_note.js](./html/pure30_note.js)
 - inclu le module [Pagemanager.js](./public/build/assets/modules/PageManager.js)
 https://github.com/arbph-dev/Elfennel.js/blob/0f05e1c82550b699f58b87ac7fda239338109db5/public/build/assets/pure30_note.js#L10
 
-- charge la page et ses recources, appele window.onload et instancie **PageManager** via son *constructeur*
+- charge la page et ses recources, appele **window.onload** et instancie **PageManager** via son *constructeur*
 
 - affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible. Ceci du fait de la portée module et globale des variables et fonctions
 
