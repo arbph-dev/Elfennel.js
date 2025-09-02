@@ -7,8 +7,8 @@ Le code brut
 - body
 	- **header** class **w3-top w3-row w3-theme-d4** id **Topbar**
 		- **div** class **w3-theme-l1 w3-left**  id **Topbar_Logo**
-	    - **div** class **w3-theme w3-left** id **Topbar_Menu**
-		    - tag **a** class **w3-bar-item w3-button w3-hide-small w3-hover-white**
+  		- **div** class **w3-theme w3-left** id **Topbar_Menu**
+     		- **a** class **w3-bar-item w3-button w3-hide-small w3-hover-white**
 	    - **div** class **w3-theme-d1 w3-right** id **Topbar_Sys**
 		 - **a** class **w3-bar-item w3-button w3-hover-white w3-theme-l1 w3-hide-large**
 	- **nav** class  **w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left** id **Sidebar**
