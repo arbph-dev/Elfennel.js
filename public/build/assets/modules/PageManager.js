@@ -58,22 +58,33 @@ export class Tab
     if ( DEBUG === true){ console.log ("module : PageManager.js / class Tab / MakefromString l51  => ended without crash" )}      
   }
 
+
+  CreatefromNode( strP1 = 'Message initial template node')
+  {
+    let tmpobj =   buildTabNode('Success' , strP1) 
+    if ( DEBUG === true)
+      { 
+        console.log ("module : PageManager.js / class Tab / CreatefromNode  => ended without crash" )
+      }
+    return tmpobj         
+  }
+
+
+
   /**----------------------------------------------------------------------------------------------------------------------
-   *  this.#collTab[this.#currentTab].MakefromNode("Titre Onglet 8") //ok
+   *  
    * @param {*} strP1 
    */
-  MakefromNode( strP1 = 'Message initial template node')
+  MakeContainerfromNode( strP1 = 'Message initial template node')
   {
-    //debugger
+
 
     if ( ( typeof( this.obj) != undefined ) && ( this.obj != null ) )
       {
-        //this.obj.innerHTML ='';
-        //this.obj.innerHTML =`<h1>${strP1}</h1><p>On passe le texte de l'onglet</p>`;
-        this.obj.appendChild( buildTabNode('Success' , strP1) )
+       this.obj.appendChild( buildTabContainerNode('Success' , strP1) )
       }
       
-    if ( DEBUG === true){ console.log ("module : PageManager.js / class Tab / MakefromNode l68  => ended without crash" )}      
+    if ( DEBUG === true){ console.log ("module : PageManager.js / class Tab / MakeContainerfromNode l68  => ended without crash" )}      
   }
 
 
@@ -256,38 +267,58 @@ function buildTab( T, M )
 
 
 /**-------------------------------------------------------------------------------------------------------------------------  
- *  Utilisation : class Tab methode MakefromNode
+ *  Utilisation : class Tab methode MakeContainerfromNode
  * @param {*} T : Alert , Information , Success , Warning
  * @param {*} M 
  * @returns 
  */
-  function buildTabNode(T, M)
+function buildTabContainerNode(T, M)
 {
-const ndTab = document.createElement("div"); ndTab.classList ="w3-container" //constante 1
+  const ndTab = document.createElement("div"); 
+  ndTab.classList ="w3-container" //constante 1
 
-const ndBarTab = document.createElement("div") ; ndBarTab.classList = "w3-bar w3-black" //constante 2 //-><div class="w3-bar w3-black">Barre</div>
-ndBarTab.innerHTML="w3-bar"
+  const ndBarTab = document.createElement("div") ; 
+  ndBarTab.classList = "w3-bar w3-black" //constante 2 //-><div class="w3-bar w3-black">Barre</div>
+  ndBarTab.innerHTML="w3-bar"
 
-let classInfoTab = makeClassInfoTab(T)
+  let classInfoTab = makeClassInfoTab(T)
 
-const ndInfoTab = document.createElement("div") ; ndInfoTab.classList = classInfoTab // -> <div class="w3-panel w3-color">  
+  const ndInfoTab = document.createElement("div") ; ndInfoTab.classList = classInfoTab // -> <div class="w3-panel w3-color">  
 
-const ndH3InfoTab = document.createElement("h3") ; ndH3InfoTab.innerText = T // ->-> <h3>T</h3>
-const ndtextInfoTab = document.createElement("p") ; ndtextInfoTab.innerText = M // ->-> //<p>M</p>
+  const ndH3InfoTab = document.createElement("h3") ; ndH3InfoTab.innerText = T // ->-> <h3>T</h3>
+  const ndtextInfoTab = document.createElement("p") ; ndtextInfoTab.innerText = M // ->-> //<p>M</p>
 
-const ndContentTab = document.createElement("div") ; ndContentTab.classList ="w3-container" // -><div class="w3-container">
+  const ndContentTab = document.createElement("div") ; ndContentTab.classList ="w3-container" // -><div class="w3-container">
 
 
-ndInfoTab.appendChild(ndH3InfoTab)
-ndInfoTab.appendChild(ndtextInfoTab)
+  ndInfoTab.appendChild(ndH3InfoTab)
+  ndInfoTab.appendChild(ndtextInfoTab)
 
-ndTab.appendChild(ndBarTab)
-ndTab.appendChild(ndInfoTab)
-ndTab.appendChild(ndContentTab)
+  ndTab.appendChild(ndBarTab)
+  ndTab.appendChild(ndInfoTab)
+  ndTab.appendChild(ndContentTab)
 
-return ndTab
+  return ndTab
 
 }
+
+
+  function buildTabNode(T, M)
+  {
+  const ndTab = document.createElement("div");
+  ndTab.classList = "w3-container w3-padding-64 w3-hide"
+ 
+  const ndTabContainer = buildTabContainerNode(T, M)
+  ndTab.appendChild(ndTabContainer)
+  
+  return ndTab
+
+  }
+
+
+
+
+
 
 
 /**----------------------------------------------------------------------------------------------------------------------
@@ -452,7 +483,8 @@ export class PageManager {
 
       for (i =  0 ; i < this.#collTabElement.length; i++) 
       {
-        objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );this.#collTab.push(objTab) //creation des instances de class Tab en memoire
+        objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );
+        this.#collTab.push(objTab) //creation des instances de class Tab en memoire
         this.#collTabElement[i].id = objTab.id // modification DOM
         this.#collTabElement[i].name = objTab.name // modification DOM
       }
@@ -467,7 +499,7 @@ export class PageManager {
     initFailSafe()
     {
       
-      this.#collTab[8].MakefromNode("Titre Onglet 8 xhr") //ok
+      this.#collTab[8].MakeContainerfromNode("Titre Onglet 8 xhr") //ok
 
       let t8 = this.#collTab[8] //ref onglet 8 ??
       let PMref = this //ref PageManager  necessaire pour la fonction 
@@ -482,6 +514,8 @@ export class PageManager {
         }  
       )
 
+      debugger
+      this.addTab()
 
     }
 
@@ -522,22 +556,38 @@ export class PageManager {
       }
       this.#currentTab = index;
 
-      if ( index === 8 )
-      {
-        let TabTemp = this.#collTab[index]
-        TabTemp.contentSet('<h1>PageManager.showTab</h1><p>TabTemp.contentSet</p>')
-        // let a = TabTemp.contentGet() ; console.log(a) // OK a documenter
-        //a = TabTemp.infoGet() ; console.log(a) // ok retouren un objet a documenter
-        
 
-        debugger
-        
-        TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
 
-        TabTemp.contentSetfromPaginateData(0) // Ok
-        //Tab  infoSet(T,M) avec // - T = Alert , Information , Success , Warning // - M = message text html light
-        TabTemp.infoSet('Information', 'Tab::infoSet(T,M) , it s works' )
-      }
+    }
+
+    // version de dev on ne passe rien ?
+    addTab()
+    {
+      // cree un nouveau noeud tab
+        let i = this.#collTab.length
+        
+        let objTab = new Tab( i , `tab-${i}`,`tab-${i}` , null );
+        let nodeTabe = objTab.CreatefromNode()
+
+        this.#Root.appendChild(nodeTabe)
+
+        this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere tous les onglets document
+        objTab.obj = this.#collTabElement[i]
+
+        this.#collTab.push(objTab) //creation des instances de class Tab en memoire
+
+
+    }
+
+
+
+    getTopLinks()
+    {
+
+    }
+
+    getSideinks()
+    {
 
     }
 
