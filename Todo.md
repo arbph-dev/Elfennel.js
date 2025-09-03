@@ -2,7 +2,7 @@
 
 Essai a réaliser sur modification # 2025-09-02 /001 => ok
 - MakefromNode doit etre testée
-- On ajoute une méthode PageManger::add()
+- On ajoute une méthode **PageManager::add()**
 
 ```js
     addTab()
@@ -28,14 +28,14 @@ Ajout correcte dans la structure mais le noeud n'a pas attribut id ni name
 => modif 
 - on affiche le  tab créer pour les essais
 
-- Tab::MakefromNode doit affecter les propriétés id et name
+- **Tab::MakefromNode** doit affecter les propriétés id et name
 
-- Suppression de la partie essai sur l'onglet 8 depuis la fonction show
+- Suppression de la partie essai sur l'onglet 8 depuis la méthode **PageManager::show**
 	a déplacer dans initfailsafe ou constructeur
 
 - prévoir uen fonction init générale ?? eval string ??
 
-```
+```js
       if ( index === 8 )
       {
         let TabTemp = this.#collTab[index]
