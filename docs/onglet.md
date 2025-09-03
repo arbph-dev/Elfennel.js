@@ -119,13 +119,11 @@ objTab.obj = this.#collTabElement[i]
 this.#collTab.push(objTab) //creation des instances de class Tab en memoire
 ```
 
-### Tab::MakeContainerfromNode( strP1 = 'Message initial template node')
-**TODO** Renommer en **CreateContainerfromNode**
+### Tab::CreateContainerfromNode( strP1 = 'Message initial template node')
+buildTabContainerNode construit le noeud "container", section reservé
 
-### Tab::MakefromString( strP1 = 'Message initial template string' )
-
-**TODO** Renommer en **CreateContainerfromString**
-emploie la fonction utilitaire **buildTab( T, M )** qui retourne ue chaine, la chaine est assignée au Noeud "onglet"
+### Tab::CreateContainerfromString( strP1 = 'Message initial template string' )
+emploie la fonction utilitaire **buildTab( T, M )** qui retourne ue chaine, la chaine est assignée à la propriéé innerHTML du Noeud "onglet",
 
 
 ## Fonctions bas niveau
