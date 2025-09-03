@@ -44,7 +44,9 @@ fileTodo	: PageManager.js Pure30_note.js
 
 
 on upload le dernier pagemanager
-	on check
+
+[x] on check = OK
+
 on sauvegarde dans le dossier publication
 	PageManager.js
 	xhr.js
