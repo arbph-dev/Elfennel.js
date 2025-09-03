@@ -1,4 +1,77 @@
 # 2025-09-02 / 002
+idTodo		: #0903000 
+descTodo	: gérer le défaut PM 0000 <= this.#initMainElementsFounded = false
+fileTodo	: PageManager.js
+rowfileTodo	: 458
+
+---
+
+# 2025-09-02 / 002
+idTodo		: #0903001  FUNCTION ERROR SYS
+descTodo	: afficher un message
+fileTodo	: PageManager.js
+rowfileTodo	: 475
+
+---
+
+# 2025-09-02 / 002
+
+idTodo		: #0903002 =>
+descTodo	: gestion des donnés plus élaborées dans une autre fonction que iniFailSafe
+fileTodo	: PageManager.js
+rowfileTodo	: 546
+peut impacter la callback UpdateData
+prevoir gestion requete
+objet echange 
+	id = timestamp ms
+	reqSent	 = true, false; 
+	respRcv = true, false ;
+	echP = -1 ou id  d'une requete parente
+	sous objet requete
+		methode GET POST
+		data formdata meme en get?
+		url
+	sous objet requete
+la gestion des echanges se fait dans une classe ExchangeController
+par exemple imbd necessite plusieurs echange, on chositi, puis ondemande le sinfos sur le film
+
+---
+
+# 2025-09-03 / 003
+idTodo		: #0903003
+descTodo	: gestion des sections d'onglets
+fileTodo	: PageManager.js Pure30_note.js
+
+
+on upload le dernier pagemanager
+	on check
+on sauvegarde dans le dossier publication
+	PageManager.js
+	xhr.js
+	Pure30_note.js (version complete)
+	note.blade.php(version complete)
+	pure30.blade.php(version complete)
+
+
+=> copie dans DMZ /  note et layout
+on simplifie  note et layout
+on laisse un tab main 
+	w3-contanier w3-padding-64
+comme tab 9 10 ou 11
+
+
+on va déja désactiver la fonction existante
+
+Rmprendre une méthode de codification 
+objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );
+
+
+
+
+---
+
+
+# 2025-09-02 / 002
 
 Essai a réaliser sur modification # 2025-09-02 /001 => ok
 - MakefromNode doit etre testée
