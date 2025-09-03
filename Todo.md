@@ -45,27 +45,30 @@ fileTodo	: PageManager.js Pure30_note.js
 
 on upload le dernier pagemanager
 
-[x] on check = OK
+	[x] on check 
 
 on sauvegarde dans le dossier publication
-	PageManager.js
-	xhr.js
-	Pure30_note.js (version complete)
-	note.blade.php(version complete)
-	pure30.blade.php(version complete)
+
+	[x] PageManager.js
+	[x]	xhr.js
+	[x]	Pure30_note.js (version complete)
+	[x]	note.blade.php(version complete)
+	[x]	pure30.blade.php(version complete)
 
 
 => copie dans DMZ /  note et layout
-on simplifie  note et layout
-on laisse un tab main 
-	w3-contanier w3-padding-64
-comme tab 9 10 ou 11
+on simplifie  note.blade.php et layout pure30.blade.php
 
+ 	[ ] note.blade.php 
+ 	[ ] pure30.blade.php
+  
+on laisse main  et un enfant tab w3-contanier w3-padding-64 comme tab 9 10 ou 11 section
 
-on va déja désactiver la fonction existante
+	[ ]	Pure30_note.js (minimale reset)
 
-Rmprendre une méthode de codification 
-objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );
+**Note**
+Reprendre le code Pure30_note.js dans un fichier oldscript.js recopier le necessaire
+Reprendre une méthode de codification  : objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );
 
 
 
