@@ -85,6 +85,31 @@ https://github.com/arbph-dev/Elfennel.js/blob/e70b3c12d0a01071d830ebc99c53150c2a
 
 
 
+## structure footer
+
+
+- footer **class** w3-bottom w3-container w3-theme-l2 **id** myFooter
+    -   div  **class** w3-center **id** -
+        -   div  **class** w3-bar **id** -
+    -   h4  **class** - **id** -
+    -   p   **class** - **id** -
+
+```html
+<footer id="myFooter" class="w3-bottom w3-container w3-theme-l2">
+<!-- ==================================== Pagination ==================================== -->
+    <div class="w3-center">
+        <div class="w3-bar">myFooter</div>
+    </div>
+    <h4>Footer</h4>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+```
+
+
+
+
+
+
 ## Code brut pour documentation
 ```html
  <body>
