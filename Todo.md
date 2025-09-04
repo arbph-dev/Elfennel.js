@@ -1,4 +1,4 @@
-# 2025-09-02 / 002
+# 2025-09-03 / 000
 idTodo		: #0903000 
 descTodo	: gérer le défaut PM 0000 <= this.#initMainElementsFounded = false
 fileTodo	: PageManager.js
@@ -6,7 +6,7 @@ rowfileTodo	: 458
 
 ---
 
-# 2025-09-02 / 002
+# 2025-09-03 / 001
 idTodo		: #0903001  FUNCTION ERROR SYS
 descTodo	: afficher un message
 fileTodo	: PageManager.js
@@ -14,7 +14,7 @@ rowfileTodo	: 475
 
 ---
 
-# 2025-09-02 / 002
+# 2025-09-03 / 002
 
 idTodo		: #0903002 =>
 descTodo	: gestion des donnés plus élaborées dans une autre fonction que iniFailSafe
