@@ -1,3 +1,32 @@
+# 2025-09-04 / 000
+
+Fin des  suppresions dans **resources/views/layouts/pure30.blade.php**. On garde un template "vierge pour la suite" => pureLay00.blade.php
+
+**TODO** on reflechis à une methode base sur les tags html5, les tags 
+main va remplacer : div class w3-main id Root => main class w3-main id Root
+id ne devient plus nécessaire un seul main par document 
+
+voir structuration
+- article
+- section 
+- header 
+- footer
+
+[ ] **TODO** supprimer les sections de la vue note.blade.php
+[ ] **TODO** on reimplémente ihmSetInfotab en priorité
+[ ] **TODO** Réorgainser ihmNavSidebarClose et  ihmNavSidebarOpen  en une fonction ?? 
+[ ] **TODO** on reimplémente ihmNavSidebarClose et  ihmNavSidebarOpen en priorité
+[ ] **TODO**  déterminer différence entre classe conteneur de section
+        si besoin on nomme le contenur section pour reutiliser w3-container ou autre classe
+        <div class="w3-content w3-display-container">
+[ ] **TODO** déterminer différence entre section class w3-display-topleft et w3-panel
+          <section class="w3-display-topleft w3-hide"><h2>tab12 - section 1</h2></section>
+          <section class="w3-panel w3-hide"><h2>tab12 - section 2</h2></section>               
+
+**class**  **id** 
+
+
+
 # 2025-09-03 / 000
 idTodo		: #0903000 
 descTodo	: gérer le défaut PM 0000 <= this.#initMainElementsFounded = false
