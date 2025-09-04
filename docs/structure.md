@@ -2,16 +2,17 @@
 
 Super 👍 tu as raison, allons point par point :
 🔹 Tes choix
-- Pas de <section> directement dans un <section> → ✅ bonne pratique, ça évite des ambiguïtés.
+- Pas de section directement dans un section → ✅ bonne pratique, ça évite des ambiguïtés.
 - aside + hgroup → effectivement pas nécessaire.
 - Double div (outer + inner) → souvent utilisé pour :
 	- gérer le centrage (outer = relative, inner = absolute),
 	- appliquer deux classes différentes qui se combinent difficilement,
 	- ou pour des effets de style (padding / layout).
-	👉 Si tu n’as pas de besoin CSS particulier, inutile de dupliquer.
+	
+👉 Si tu n’as pas de besoin CSS particulier, inutile de dupliquer.
 	Tu peux rester sur un seul div ou remplacer par un élément sémantique quand c’est pertinent.
 
-Ça te donne une hiérarchie HTML5 plus claire, sans balises doublons
+👍 Ça te donne une hiérarchie HTML5 plus claire, sans balises doublons
 
 
 ## structure
