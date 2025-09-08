@@ -10,127 +10,54 @@ Les styles sont utilsés pour identifer les partie de structure : header, onglet
 
 La solution est mise en oeuvre ici : [https://elfennel.fr/note](https://elfennel.fr/note)
 
-## Actuellement
+# 2025-09-05
+## point template / note
 
-La structure est composé d'onglets associés aux objets [**Tab**](./docs/onglet.md)
+- Terminer les fonctions ihm a placer dans PageManager.js, a affecter à windows
+- repris sidebar et main
 
-Le script de page [pure30_note.js](./html/pure30_note.js) 
+### PageManager
+modifier PageManager constructor et appel dans pure30_note.js
+-suppression un argument rootId  
+    //this.#Root = document.getElementById(rootId)
+    this.#Root = document.getElementsByTagName('main')[0] 
 
-- inclu le module [Pagemanager.js](./public/build/assets/modules/PageManager.js)
-https://github.com/arbph-dev/Elfennel.js/blob/0f05e1c82550b699f58b87ac7fda239338109db5/public/build/assets/pure30_note.js#L10
++ permet de supprimer un parametre 
++ permis par la norme un seul main par document/page
+- impose main en structure
 
-- charge la page et ses recources, appele **window.onload** et instancie **PageManager** via son *constructeur*
-https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926942633/public/build/assets/pure30_note.js#L130
+Affectation window
+**NOTE**
+La fonction  PMnavSidebarToggle necessite est affecté à la classe PageManager **bind(this)**
+```js
+window.PMnavSidebarToggle = this.navSidebarToggle.bind(this)     
+```
 
-- affecte la méthode **PageManager::showTab** à la fenêtre **window** pour qu'elle soit acessible. Ceci du fait de la portée module et globale des variables et fonctions
-https://github.com/arbph-dev/Elfennel.js/blob/ea5ac8015c4eb6dc57a197d45510722926942633/public/build/assets/pure30_note.js#L132
+elements a travailler pagination
 
-Dés lors, on peut exploiter les evenenements via les attributs **onclick** des noeuds liens (a). 
-Par exmple **ihmTabShow( 0 )** dans
-- le layout [pure30.blade.php](./resources/views/layouts/pure30.blade.php)
-- la vue [note.blade.php](./resources/views/note.blade.php)
+###  main
+Changer div en main pour moins de confusion, id non nécessaire peut etre réaffecté
+```
+<div class="w3-main" style="margin-left:250px" id="Root" name="Root">
+<main class="w3-main" style="margin-left:0px">
+```
 
+### sidebar 
+supprimer classe w3-bar-block et w3-collapse . w3-collapse force la classe et display: none !important
 ```html
-<a class="w3-bar-item w3-button w3-hover-black" href="#" onclick="ihmTabShow( 0 )">Link</a>
-<a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ihmTabShow( 0 )">Tab-0</a>
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="Sidebar" name="Sidebar">
+<nav class="w3-sidebar w3-large w3-theme-l5 w3-animate-left" id="Sidebar">
 ```
+repris style dans le template Laravel
+```css
+.w3-sidebar { bottom: 0; height: auto; top: 0; width: 80vw; z-index: 3;display: none }
 
-Le gestionnaire de page **Pagemanager** s'initialise et parcourt la [structure](./docs/structure.md)
-
-Durant le parcours 
-- on instancie des objets **Tab** qui sont associés aux noeuds et elements de structure 
-- on remplit le tableau **collTab** qui contiendra les objet **Tab**
-
-```js
-const tabClass ='w3-container w3-padding-64'  // détermine la classe employée pour les onglets
-
-this.#collTabElement = this.#Root.getElementsByClassName(tabClass) // recupere tous les onglets document
-this.#collTab = new Array() // on prépare la collection collTab de class Tab
-// parcours les onglets document creation des instances de class Tab en memoire
-//  => les structures peuvent etre identifés ??
-
-for (i =  0 ; i < this.#collTabElement.length; i++) 
-{
-  objTab = new Tab( i , `tab-${i}`,`tab-${i}` , this.#collTabElement[i] );this.#collTab.push(objTab) //creation des instances de class Tab en memoire
-  this.#collTabElement[i].id = objTab.id // modification DOM
-  this.#collTabElement[i].name = objTab.name // modification DOM
+@media (min-width: 993px) {
+.w3-sidebar { bottom: 0; height: auto; top: 0; width: 500px; z-index: 3;display: none }
 }
 ```
 
 
-
-
-Dans la vue [note.blade.php] les sections 8, 9 sont laissé vides, sans sections définies par @yield, cela ne semble pas géné
-```blade
-@section('section8')
-@endsection
-```
-On emploie la section 8 pour les essais , la méthode **Tab::MakefromNode** permet de générer les noeuds et le contenu
-
-
-```js
-initFailSafe()
-{
-  
-  this.#collTab[8].MakefromNode("Titre Onglet 8 xhr") //ok
-
-  let t8 = this.#collTab[8] //ref onglet 8 ??
-  let PMref = this //ref PageManager  necessaire pour la fonction 
-
-  window.xhr_getRequest( 
-    'GET' ,
-    "https://jsonplaceholder.typicode.com/todos?_limit=13" ,
-    {
-      load: function(event) { PMref.UpdateData( t8 , event.target  ) }
-    }  
-  )
-
-}
-```
-
-Le gestionnaire de page **PageManager**  gére les echanges de données, qu'il renvoie a un objet **Tab** qui en a la charge
-
-Ici une requete  GET sur URL en passant une callback , la fonction emplyée en callbacks exploite la méthode de **PageManager::UpdateData**
-
-Une reference sur l'objet **PageManager** est nécessaire, this ne portant pas dans la fonction de callback
-
-Des variables sont a transmettre : 
-- t8 correspond à la un objet **Tab**
-- event.target pour gerer la réponse à la requête
-
-```js
-  let PMref = this 
-{ load: function(event) { PMref.UpdateData( t8 , event.target  ) } }  
-```
-
-Les données reçues par **PageManager** via **PageManager::UpdateData** sont stockées dans l'objet Tab
-```js
-UpdateData( el ,  evtXhr)
-  ...
-    let data = JSON.parse(evtXhr.responseText);
-  ...
-    el.StoreData(data) // stocke le sdonnées dans l'objet tab concerné reference el
-
-```  
-
-La methode **PageManager::showTab** gere l'affichage des onglets. La section 8 sert encore pour les essais 
-
-La section 8 est construite, en fin d'inisitalisation de l'objet **PageManager** par la méthode **PageManager::initFailSafe()**
-
-```js
-if ( index === 8 )
-{
-  let TabTemp = this.#collTab[index]
-
-  TabTemp.contentSetfromData() // oK , NO => retourne liste complete sans pagination
-  TabTemp.contentSetfromPaginateData(0) // Ok => liste paginée en cours
-```
-
-
-
-
-
----
 
 
 ## fichiers : 
